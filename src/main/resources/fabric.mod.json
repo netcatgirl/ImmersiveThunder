@@ -1,40 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "leahs-immersive-thunder",
-	"version": "${version}",
-	"name": "Leahs Immersive Thunder",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"LeahPie"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/leahs-immersive-thunder/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"leah.leahs_immersive_thunder.ImmersiveThunder"
-		],
-		"client": [
-			"leah.leahs_immersive_thunder.ImmersiveThunderClient"
-		],
-		"fabric-datagen": [
-			"leah.leahs_immersive_thunder.ImmersiveThunderGenerator"
-		]
-	},
-	"mixins": [
-		"leahs-immersive-thunder.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.14.17",
-		"minecraft": "~1.19.3",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "leahs-immersive-thunder",
+  "version": "${version}",
+  "name": "Leahs Immersive Thunder",
+  "description": "Just a simple mod to useDistance on lightning thunder and impact sounds",
+  "authors": [
+    "LeahPie"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/leahs-immersive-thunder/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "leah.leahs_immersive_thunder.ImmersiveThunder"
+    ],
+    "client": [
+      "leah.leahs_immersive_thunder.ImmersiveThunderClient"
+    ],
+    "fabric-datagen": [
+      "leah.leahs_immersive_thunder.ImmersiveThunderGenerator"
+    ]
+  },
+  "mixins": [
+    "leahs-immersive-thunder.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "minecraft": "~1.19.3",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }
