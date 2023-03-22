@@ -1,12 +1,11 @@
 {
-	"required": true,
-	"package": "leah.leahs_immersive_thunder.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ExampleMixin",
-		"ImmersiveThunderMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "leah.leahs_immersive_thunder.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ImmersiveThunderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
