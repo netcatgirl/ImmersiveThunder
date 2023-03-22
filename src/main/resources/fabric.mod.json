@@ -8,8 +8,8 @@
     "LeahPie"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/LeahPie/ImmersiveThunder",
+    "sources": "https://github.com/LeahPie/ImmersiveThunder"
   },
   "license": "MIT",
   "icon": "assets/leahs-immersive-thunder/icon.png",
@@ -17,9 +17,6 @@
   "entrypoints": {
     "main": [
       "leah.leahs_immersive_thunder.ImmersiveThunder"
-    ],
-    "client": [
-      "leah.leahs_immersive_thunder.ImmersiveThunderClient"
     ],
     "fabric-datagen": [
       "leah.leahs_immersive_thunder.ImmersiveThunderGenerator"
