@@ -17,9 +17,6 @@
   "entrypoints": {
     "main": [
       "leah.leahs_immersive_thunder.ImmersiveThunder"
-    ],
-    "fabric-datagen": [
-      "leah.leahs_immersive_thunder.ImmersiveThunderGenerator"
     ]
   },
   "mixins": [
