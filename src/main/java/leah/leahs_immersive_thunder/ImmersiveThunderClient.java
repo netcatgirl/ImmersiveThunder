@@ -15,6 +15,7 @@ public class ImmersiveThunderClient implements ModInitializer {
 
     public static final Identifier THUNDER_CLOSE = new Identifier("leahs-immersive-thunder:thunder_close");
     public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE = SoundEvent.of(THUNDER_CLOSE);
+
     public static final Identifier THUNDER_MEDIUM = new Identifier("leahs-immersive-thunder:thunder_medium");
     public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM = SoundEvent.of(THUNDER_MEDIUM);
 
