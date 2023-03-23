@@ -5,7 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ImmersiveThunder implements ModInitializer {
+public class ImmersiveThunderClient implements ModInitializer {
     public static final String MOD_ID = "leahs-immersive-thunder";
     public static final Logger LOGGER = LoggerFactory.getLogger("leahs-immersive-thunder");
 

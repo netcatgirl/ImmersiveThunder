@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "leah.leahs_immersive_thunder.ImmersiveThunder"
+      "leah.leahs_immersive_thunder.ImmersiveThunderClient"
     ]
   },
   "mixins": [
