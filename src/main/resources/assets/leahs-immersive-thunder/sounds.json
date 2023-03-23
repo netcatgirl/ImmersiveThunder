@@ -1,0 +1,24 @@
+{
+  "thunder_close": {
+    "sounds": [
+      "leahs-immersive-thunder:thunder_close_1",
+      "leahs-immersive-thunder:thunder_close_2",
+      "leahs-immersive-thunder:thunder_close_3"
+    ]
+  },
+  "thunder_medium": {
+    "sounds": [
+      "leahs-immersive-thunder:thunder_medium_1",
+      "leahs-immersive-thunder:thunder_medium_2",
+      "leahs-immersive-thunder:thunder_medium_3",
+      "leahs-immersive-thunder:thunder_medium_4"
+    ]
+  },
+  "thunder_far": {
+    "sounds": [
+      "leahs-immersive-thunder:thunder_far_1",
+      "leahs-immersive-thunder:thunder_far_2",
+      "leahs-immersive-thunder:thunder_far_3"
+    ]
+  }
+}
