@@ -2,7 +2,8 @@
   "required": true,
   "package": "leah.leahs_immersive_thunder.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
+  "mixins": [],
+  "client": [
     "ImmersiveThunderMixin"
   ],
   "injectors": {
