@@ -18,13 +18,13 @@ public class ImmersiveThunderMixin {
     LightningEntity lightning = (LightningEntity) (Object) this;
     PlayerEntity player = MinecraftClient.getInstance().player;
 
-    double distanceToPlayer = player.distanceTo(lightning);
-    double closeDistance = 100;
-    double mediumDistance = 150;
+    double distanceToEntity = player.distanceTo(lightning);
+    double closeDistance = 90;
+    double mediumDistance = 140;
 
-    if (distanceToPlayer <= closeDistance) {
+    if (distanceToEntity <= closeDistance) {
       world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE, SoundCategory.WEATHER, 5000.0f, 0.8f + world.random.nextFloat() * 0.2f, false);
-    } else if (distanceToPlayer <= mediumDistance) {
+    } else if (distanceToEntity <= mediumDistance) {
       world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
     } else {
       world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_FAR, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
