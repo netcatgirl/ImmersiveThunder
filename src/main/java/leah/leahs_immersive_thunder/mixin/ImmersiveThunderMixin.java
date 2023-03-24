@@ -13,21 +13,21 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LightningEntity.class)
 public class ImmersiveThunderMixin {
-  @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(DDDLnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FFZ)V"))
-  private void playSound(World world, double x, double y, double z, SoundEvent sound, SoundCategory category, float volume, float pitch, boolean useDistance) {
-    LightningEntity lightning = (LightningEntity) (Object) this;
-    PlayerEntity player = MinecraftClient.getInstance().player;
+    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(DDDLnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FFZ)V"))
+    private void playSound(World world, double x, double y, double z, SoundEvent sound, SoundCategory category, float volume, float pitch, boolean useDistance) {
+        LightningEntity lightning = (LightningEntity) (Object) this;
+        PlayerEntity player = MinecraftClient.getInstance().player;
+        
+        double distanceToPlayer = player.distanceTo(lightning);
+        double closeDistance = 100;
+        double mediumDistance = 150;
 
-    double distanceToPlayer = player.distanceTo(lightning);
-    double closeDistance = 100;
-    double mediumDistance = 150;
-
-    if (distanceToPlayer <= closeDistance) {
-      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE, SoundCategory.WEATHER, 5000.0f, 0.8f + world.random.nextFloat() * 0.2f, false);
-    } else if (distanceToPlayer <= mediumDistance) {
-      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
-    } else {
-      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_FAR, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
+        if (distanceToPlayer <= closeDistance) {
+            world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE, SoundCategory.WEATHER, 5000.0f, 0.8f + world.random.nextFloat() * 0.2f, false);
+        } else if (distanceToPlayer <= mediumDistance) {
+            world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
+        } else {
+            world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_FAR, SoundCategory.WEATHER, 10000.0f, 0.8f + world.random.nextFloat() * 0.2f, true);
+        }
     }
-  }
 }
