@@ -35,8 +35,8 @@ public class ImmersiveThunderMixin implements ThunderSoundInterface {
   public void playThunderSound(World world, LightningEntity lightning, SoundEvent soundEvent, float volume, boolean useDistance) {
     world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), soundEvent, SoundCategory.WEATHER, volume, 0.8f + world.random.nextFloat() * 0.2f, useDistance);
 
-    if (!ImmersiveThunderClient.CONFIG.muteImpactSound()) {
-      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.WEATHER, 2.0f, 0.5f + world.random.nextFloat() * 0.2f, false);
+    if (ImmersiveThunderClient.CONFIG.impactSound()) {
+      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.WEATHER, ImmersiveThunderClient.CONFIG.impactSoundVolume(), 0.5f + world.random.nextFloat() * 0.2f, false);
     }
   }
 }

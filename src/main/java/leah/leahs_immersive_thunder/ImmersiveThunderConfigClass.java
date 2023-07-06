@@ -10,5 +10,6 @@ public class ImmersiveThunderConfigClass {
     public float thunderMediumVolume = 10000.0f;
     public float thunderFarVolume = 10000.0f;
 
-    public boolean muteImpactSound = true;
+    public boolean impactSound = true;
+    public float impactSoundVolume = 2.0f;
 }
