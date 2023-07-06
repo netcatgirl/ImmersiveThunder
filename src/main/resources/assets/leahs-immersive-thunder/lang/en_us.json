@@ -1,0 +1,8 @@
+{
+  "text.config.immersive-thunder-config.title": "Immersive Thunder Config",
+  "text.config.immersive-thunder-config.option.thunderCloseVolume": "Close Thunder Volume",
+  "text.config.immersive-thunder-config.option.thunderMediumVolume": "Medium Thunder Volume",
+  "text.config.immersive-thunder-config.option.thunderFarVolume": "Far Thunder Volume",
+  "text.config.immersive-thunder-config.option.impactSound": "Impact Sound",
+  "text.config.immersive-thunder-config.option.impactSoundVolume": "Impact Sound Volume"
+}
