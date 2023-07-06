@@ -7,6 +7,7 @@ import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,16 +23,20 @@ public class ImmersiveThunderMixin implements ThunderSoundInterface {
     double distanceToEntity = player.distanceTo(lightning);
 
     if (distanceToEntity <= closeDistance) {
-      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE, 5000.0f, false);
+      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE, ImmersiveThunderClient.CONFIG.thunderCloseVolume(), false);
     } else if (distanceToEntity <= mediumDistance) {
-      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM, 10000.0f, true);
+      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM, ImmersiveThunderClient.CONFIG.thunderMediumVolume(), true);
     } else {
-      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_FAR, 10000.0f, true);
+      playThunderSound(world, lightning, ImmersiveThunderClient.ENTITY_LIGHTNING_BOLT_THUNDER_FAR, ImmersiveThunderClient.CONFIG.thunderFarVolume(), true);
     }
   }
 
   @Override
   public void playThunderSound(World world, LightningEntity lightning, SoundEvent soundEvent, float volume, boolean useDistance) {
     world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), soundEvent, SoundCategory.WEATHER, volume, 0.8f + world.random.nextFloat() * 0.2f, useDistance);
+
+    if (!ImmersiveThunderClient.CONFIG.muteImpactSound()) {
+      world.playSound(lightning.getX(), lightning.getY(), lightning.getZ(), SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.WEATHER, 2.0f, 0.5f + world.random.nextFloat() * 0.2f, false);
+    }
   }
 }

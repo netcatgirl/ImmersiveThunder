@@ -1,7 +1,6 @@
 package leah.leahs_immersive_thunder;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -12,6 +11,8 @@ import org.slf4j.LoggerFactory;
 public class ImmersiveThunderClient implements ModInitializer {
   public static final String MOD_ID = "leahs-immersive-thunder";
   public static final Logger LOGGER = LoggerFactory.getLogger("leahs-immersive-thunder");
+
+  public static final ImmersiveThunderConfig CONFIG = ImmersiveThunderConfig.createAndLoad();
 
   public static final Identifier THUNDER_CLOSE = new Identifier("leahs-immersive-thunder:thunder_close");
   public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE = SoundEvent.of(THUNDER_CLOSE);
