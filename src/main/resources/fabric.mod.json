@@ -23,8 +23,8 @@
     "leahs-immersive-thunder.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.17",
-    "minecraft": "~1.19.3",
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
     "java": ">=17",
     "fabric-api": "*"
   },

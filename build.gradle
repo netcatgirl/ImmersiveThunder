@@ -53,7 +53,7 @@ dependencies {
 	include "io.wispforest:owo-sentinel:${project.owo_version}"
 	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 
-	modApi "com.terraformersmc:modmenu:6.2.3"
+	modApi "com.terraformersmc:modmenu:7.1.0"
 }
 
 processResources {
