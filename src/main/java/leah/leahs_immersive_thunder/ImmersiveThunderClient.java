@@ -1,5 +1,9 @@
 package leah.leahs_immersive_thunder;
 
+import leah.leahs_immersive_thunder.config.ImmersiveThunderConfig;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigHolder;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -12,7 +16,7 @@ public class ImmersiveThunderClient implements ModInitializer {
   public static final String MOD_ID = "leahs-immersive-thunder";
   public static final Logger LOGGER = LoggerFactory.getLogger("leahs-immersive-thunder");
 
-  public static final ImmersiveThunderConfig CONFIG = ImmersiveThunderConfig.createAndLoad();
+  public static ConfigHolder<ImmersiveThunderConfig> configHolder;
 
   public static final Identifier THUNDER_CLOSE = new Identifier("leahs-immersive-thunder:thunder_close");
   public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE = SoundEvent.of(THUNDER_CLOSE);
@@ -25,9 +29,12 @@ public class ImmersiveThunderClient implements ModInitializer {
 
   @Override
   public void onInitialize() {
+    configHolder = AutoConfig.register(ImmersiveThunderConfig.class, Toml4jConfigSerializer::new);
+
     Registry.register(Registries.SOUND_EVENT, ImmersiveThunderClient.THUNDER_CLOSE, ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE);
     Registry.register(Registries.SOUND_EVENT, ImmersiveThunderClient.THUNDER_MEDIUM, ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM);
     Registry.register(Registries.SOUND_EVENT, ImmersiveThunderClient.THUNDER_FAR, ENTITY_LIGHTNING_BOLT_THUNDER_FAR);
+
     LOGGER.info("Immersive Thunder loaded.");
   }
 }

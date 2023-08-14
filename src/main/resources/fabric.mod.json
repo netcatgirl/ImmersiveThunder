@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "leah.leahs_immersive_thunder.ImmersiveThunderClient"
+    ],
+    "modmenu": [
+      "leah.leahs_immersive_thunder.config.ModMenuIntegration"
     ]
   },
   "mixins": [
