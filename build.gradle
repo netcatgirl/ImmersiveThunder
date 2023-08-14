@@ -55,7 +55,7 @@ dependencies {
 	}
 
 	// Mod Menu
-	modApi "com.terraformersmc:modmenu:7.1.0"
+	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {
