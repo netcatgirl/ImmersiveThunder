@@ -5,11 +5,11 @@
   "name": "Immersive Thunder",
   "description": "Just a simple mod to use distance-based thunder sounds",
   "authors": [
-    "LeahPy"
+    "0x4C656168"
   ],
   "contact": {
-    "homepage": "https://github.com/LeahPy/ImmersiveThunder",
-    "sources": "https://github.com/LeahPy/ImmersiveThunder"
+    "homepage": "https://github.com/0x4C656168/ImmersiveThunder",
+    "sources": "https://github.com/0x4C656168/ImmersiveThunder"
   },
   "license": "MIT",
   "icon": "assets/leahs-immersive-thunder/icon.png",
