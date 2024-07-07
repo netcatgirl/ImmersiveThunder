@@ -1,5 +1,6 @@
 package leah.leahs_immersive_thunder.mixin;
 
+import leah.leahs_immersive_thunder.ImmersiveThunderClient;
 import leah.leahs_immersive_thunder.config.ImmersiveThunderConfig;
 import leah.leahs_immersive_thunder.util.ThunderSoundInterface;
 import net.minecraft.client.MinecraftClient;
