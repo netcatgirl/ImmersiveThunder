@@ -18,13 +18,13 @@ public class ImmersiveThunderClient implements ModInitializer {
 
     public static ConfigHolder<ImmersiveThunderConfig> configHolder;
 
-    public static final Identifier THUNDER_CLOSE = new Identifier("leahs-immersive-thunder:thunder_close");
+    public static final Identifier THUNDER_CLOSE = Identifier.of("leahs-immersive-thunder:thunder_close");
     public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_CLOSE = SoundEvent.of(THUNDER_CLOSE);
 
-    public static final Identifier THUNDER_MEDIUM = new Identifier("leahs-immersive-thunder:thunder_medium");
+    public static final Identifier THUNDER_MEDIUM = Identifier.of("leahs-immersive-thunder:thunder_medium");
     public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_MEDIUM = SoundEvent.of(THUNDER_MEDIUM);
 
-    public static final Identifier THUNDER_FAR = new Identifier("leahs-immersive-thunder:thunder_far");
+    public static final Identifier THUNDER_FAR = Identifier.of("leahs-immersive-thunder:thunder_far");
     public static SoundEvent ENTITY_LIGHTNING_BOLT_THUNDER_FAR = SoundEvent.of(THUNDER_FAR);
 
     @Override
