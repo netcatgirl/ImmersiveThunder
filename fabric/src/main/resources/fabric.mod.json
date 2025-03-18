@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://github.com/netcatgirl/ImmersiveThunder",
+    "sources": "https://github.com/netcatgirl/ImmersiveThunder"
+  },
+  "license": "${license}",
+  "icon": "assets/immersivethunder/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.netcatgirl.immersivethunder.ImmersiveThunderClient"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=${java_version}"
+  }
+}
+
