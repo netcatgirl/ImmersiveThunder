@@ -7,3 +7,7 @@ delayed the sound will be.
 ---
 
 **Sounds best with [Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered)**
+
+---
+
+The code is also hosted on [Codeberg](https://codeberg.org/Leah/ImmersiveThunder) :)
